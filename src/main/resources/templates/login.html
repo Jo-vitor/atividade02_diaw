@@ -7,7 +7,7 @@
 
     <title>Login - PUC Minas</title>
 
-    <link rel="stylesheet" href="../static/css/login.css">
+    <link rel="stylesheet" th:href="@{/css/login.css}">
 </head>
 
 <body>
@@ -17,7 +17,7 @@
     <!-- Logo PUC Minas -->
     <div class="login-image-logo-container">
         <img
-            src="../static/images/pucminas-logo.png"
+            th:src="@{/images/pucminas-logo.png}"
             alt="Logo PUC Minas"
         >
     </div>
@@ -63,9 +63,9 @@
                 Ainda não tem cadastro?
                 <br>
 
-                <a href="./register.html">Cadastre-se</a>
+                <a href="/register">Cadastre-se</a>
                 <span>|</span>
-                <a href="./recorverPassword.html">Esqueceu sua senha?</a>
+                <a href="/recoverpassword">Esqueceu sua senha?</a>
             </p>
 
         </form>

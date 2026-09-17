@@ -64,19 +64,21 @@ public class SecurityConfig {
     }
 
     @Bean
-    public UserDetailsService userDetailsService() {
+    public InMemoryUserDetailsManager userDetailsService() {
+
         UserDetails user = User.builder()
                 .username(userConfig.getUserUsername())
-                .password(passwordEncoder().encode(userConfig.getUserPassword())) // Codificar a senha
+                .password(passwordEncoder().encode(userConfig.getUserPassword()))
                 .roles("USER")
                 .build();
+
         UserDetails admin = User.builder()
                 .username(userConfig.getAdminUsername())
                 .password(passwordEncoder().encode(userConfig.getAdminPassword()))
                 .roles("ADMIN")
                 .build();
 
-        return new InMemoryUserDetailsManager(user,admin);
+        return new InMemoryUserDetailsManager(user, admin);
     }
 
     @Bean

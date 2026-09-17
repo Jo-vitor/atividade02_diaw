@@ -7,7 +7,7 @@
 
     <title>Cadastro - PUC Minas</title>
 
-    <link rel="stylesheet" href="../static/css/register.css">
+    <link rel="stylesheet" th:href="@{/css/register.css}">
 </head>
 
 <body>
@@ -15,7 +15,7 @@
 <div class="register-container">
 
     <div class="register-image-logo-container">
-        <img src="../static/images/pucminas-logo.png" alt="Logo PUC Minas">
+        <img th:src="@{/images/pucminas-logo.png}" alt="Logo PUC Minas">
     </div>
 
     <div class="register-form">
@@ -45,7 +45,7 @@
         </form>
 
         <div class="register-redirect-options">
-            Já possui conta? <a href="../templates/login.html">Faça login</a>
+            Já possui conta? <a href="/login">Faça login</a>
         </div>
 
     </div>

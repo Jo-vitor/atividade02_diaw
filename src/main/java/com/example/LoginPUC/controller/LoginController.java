@@ -1,6 +1,8 @@
 package com.example.LoginPUC.controller;
 
-import org.apache.catalina.startup.UserConfig;
+
+import com.example.LoginPUC.config.UserConfig;
+import com.example.LoginPUC.service.UsuarioService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -11,12 +13,14 @@ import com.example.LoginPUC.service.SendEmailService;
 @Controller 
 public class LoginController {
     
-    private UserConfig userConfig;
-    private SendEmailService sendEmailService;
+    private final UserConfig userConfig;
+    private final SendEmailService sendEmailService;
+    private final UsuarioService usuarioService;
 
-    public LoginController(UserConfig userConfig, SendEmailService SendEmailService) {
+    public LoginController(UserConfig userConfig, SendEmailService SendEmailService, UsuarioService usuarioService) {
         this.userConfig = userConfig;
         this.sendEmailService = SendEmailService;
+        this.usuarioService = usuarioService;
     }
 
     @GetMapping("/login")
@@ -55,7 +59,7 @@ public class LoginController {
             @RequestParam("senha") String senha) {
 
         // Aqui você pode adicionar lógica para salvar os dados do usuário, por exemplo:
-        // userService.saveUser(new User(nome, email, cpf, rg, endereco, instituicao, senha));
+        usuarioService.cadastrar(nome, senha);
 
         // Redirecionar ou exibir uma mensagem de sucesso
         System.out.println("Registro: Redirecionado para a página de login.");
