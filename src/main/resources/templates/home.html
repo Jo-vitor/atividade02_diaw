@@ -7,7 +7,7 @@
 
     <title>Home - PUC Minas</title>
 
-    <link rel="stylesheet" href="../static/css/home.css">
+    <link rel="stylesheet" th:href="@{/css/home.css}">
 </head>
 
 <body>
@@ -15,7 +15,7 @@
 <div class="home-container">
 
     <div class="home-logo">
-        <img src="../static/images/pucminas-logo.png" alt="Logo PUC Minas">
+        <img th:src="@{/images/pucminas-logo.png}" alt="Logo PUC Minas">
     </div>
 
     <div class="home-content">

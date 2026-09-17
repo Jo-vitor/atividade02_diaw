@@ -25,7 +25,7 @@ public class GlobalExceptionHandler {
     public ResponseEntity<Object> handleGenericException(Exception ex) {
         Map<String, Object> body = new HashMap<>();
         body.put("timestamp", LocalDateTime.now());
-        body.put("message", "Ocorreu um erro inesperado");
+        body.put("message", ex.getMessage());
 
         return new ResponseEntity<>(body, HttpStatus.INTERNAL_SERVER_ERROR);
     }
