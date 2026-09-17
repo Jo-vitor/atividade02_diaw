@@ -22,14 +22,12 @@
         >
     </div>
 
-    <!-- Formulário -->
     <div class="login-form">
 
         <form th:action="@{/login}" method="post" class="login-form-content">
 
             <h4 class="login-title">Login</h4>
 
-            <!-- Mensagem de cadastro realizado -->
             <div th:if="${param.cadastro}" class="login-message">
                 <strong>Cadastro realizado com sucesso!</strong>
                 <span>Agora você já pode fazer login.</span>

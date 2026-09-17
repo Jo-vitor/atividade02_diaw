@@ -1,17 +1,8 @@
-/* ==========================================================================
-   RESET
-   ========================================================================== */
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
-
-/* ==========================================================================
-   VARIÁVEIS
-   ========================================================================== */
 
 :root {
     --brand: #005380;
@@ -27,11 +18,6 @@
 
     --radius: 12px;
 }
-
-
-/* ==========================================================================
-   BODY
-   ========================================================================== */
 
 html,
 body {
@@ -77,11 +63,6 @@ body {
         var(--background);
 }
 
-
-/* ==========================================================================
-   CONTAINER PRINCIPAL
-   ========================================================================== */
-
 .login-container {
     position: relative;
 
@@ -102,11 +83,6 @@ body {
         0 2px 4px rgba(0, 51, 79, 0.08),
         0 24px 56px -12px rgba(0, 51, 79, 0.25);
 }
-
-
-/* ==========================================================================
-   PAINEL DA LOGO
-   ========================================================================== */
 
 .login-image-logo-container {
     position: relative;
@@ -129,9 +105,6 @@ body {
         );
 }
 
-
-/* Círculo decorativo superior esquerdo */
-
 .login-image-logo-container::before {
     content: "";
 
@@ -148,9 +121,6 @@ body {
     background: rgba(79, 168, 216, 0.12);
 }
 
-
-/* Círculo decorativo inferior direito */
-
 .login-image-logo-container::after {
     content: "";
 
@@ -166,11 +136,6 @@ body {
 
     background: rgba(255, 255, 255, 0.06);
 }
-
-
-/* ==========================================================================
-   LOGO
-   ========================================================================== */
 
 .login-image-logo-container img {
     position: relative;
@@ -189,11 +154,6 @@ body {
     transform: scale(1.03);
 }
 
-
-/* ==========================================================================
-   ÁREA DO FORMULÁRIO
-   ========================================================================== */
-
 .login-form {
     display: flex;
     flex-direction: column;
@@ -206,21 +166,9 @@ body {
     background-color: #ffffff;
 }
 
-
-/*
- * Importante:
- * O formulário interno possui uma classe diferente para evitar
- * conflito com o .login-form que representa a área inteira.
- */
-
 .login-form-content {
     width: 100%;
 }
-
-
-/* ==========================================================================
-   TÍTULO
-   ========================================================================== */
 
 .login-title {
     width: 100%;
@@ -237,9 +185,6 @@ body {
     text-align: left;
 }
 
-
-/* Texto PUC Minas acima do título */
-
 .login-title::before {
     content: "PUC MINAS";
 
@@ -254,11 +199,6 @@ body {
 
     letter-spacing: 0.12em;
 }
-
-
-/* ==========================================================================
-   INPUTS
-   ========================================================================== */
 
 .login-form-content input {
     display: block;
@@ -288,22 +228,13 @@ body {
         background-color 0.2s ease;
 }
 
-
-/* Primeiro input */
-
 .login-form-content input:first-of-type {
     margin-top: 0;
 }
 
-
-/* Placeholder */
-
 .login-form-content input::placeholder {
     color: #94a3b8;
 }
-
-
-/* Input selecionado */
 
 .login-form-content input:focus {
     border-color: var(--brand);
@@ -311,11 +242,6 @@ body {
     box-shadow:
         0 0 0 3px rgba(0, 83, 128, 0.12);
 }
-
-
-/* ==========================================================================
-   BOTÃO
-   ========================================================================== */
 
 .login-button-container {
     width: 100%;
@@ -326,7 +252,6 @@ body {
 
     margin-top: 1.25rem;
 }
-
 
 .login-button-container button {
     width: 100%;
@@ -356,9 +281,6 @@ body {
         box-shadow 0.2s ease;
 }
 
-
-/* Hover */
-
 .login-button-container button:hover {
     background-color: var(--brand-deep);
 
@@ -368,17 +290,9 @@ body {
     transform: translateY(-1px);
 }
 
-
-/* Clique */
-
 .login-button-container button:active {
     transform: translateY(0);
 }
-
-
-/* ==========================================================================
-   LINKS
-   ========================================================================== */
 
 .login-redirect-options {
     width: 100%;
@@ -395,7 +309,6 @@ body {
     text-align: center;
 }
 
-
 .login-redirect-options a {
     color: var(--brand);
 
@@ -406,13 +319,11 @@ body {
     transition: color 0.2s ease;
 }
 
-
 .login-redirect-options a:hover {
     color: var(--brand-deep);
 
     text-decoration: underline;
 }
-
 
 .login-redirect-options span {
     color: #cbd5e1;
@@ -437,11 +348,6 @@ body {
 .login-message strong {
     font-size: 15px;
 }
-
-
-/* ==========================================================================
-   RESPONSIVIDADE
-   ========================================================================== */
 
 @media (max-width: 700px) {
 
@@ -480,11 +386,6 @@ body {
     }
 }
 
-
-/* ==========================================================================
-   CELULARES PEQUENOS
-   ========================================================================== */
-
 @media (max-width: 400px) {
 
     body {
@@ -503,11 +404,6 @@ body {
         font-size: 1.5rem;
     }
 }
-
-
-/* ==========================================================================
-   ACESSIBILIDADE
-   ========================================================================== */
 
 @media (prefers-reduced-motion: reduce) {
 
